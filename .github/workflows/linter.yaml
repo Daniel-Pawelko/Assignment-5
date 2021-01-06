@@ -24,22 +24,22 @@ jobs:
           
           
           
-              steps:
-              
-                    - name: Check out Git repository
-                    
-                            uses: actions/checkout@master
-                            
-                                    
-                                    
-                                          - name: GitHub Super-Linter
-                                          
-                                                  uses: github/super-linter@master
-                                                  
-                                                          env:
-                                                          
-                                                                    VALIDATE_ALL_CODEBASE: true
-                                                                    
-                                                                              DEFAULT_BRANCH: master
-                                                                              
-                                                                                        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      steps:
+
+            - name: Check out Git repository
+
+              uses: actions/checkout@master
+
+
+
+            - name: GitHub Super-Linter
+
+              uses: github/super-linter@master
+
+              env:
+
+                VALIDATE_ALL_CODEBASE: true
+
+                DEFAULT_BRANCH: master
+
+                GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
